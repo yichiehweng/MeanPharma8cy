@@ -1,0 +1,20 @@
+ng new MeanPharmacy
+cd MeanPharmacy/
+npm init
+touch index.js
+
+npm install -s mongoose
+npm install -s express
+npm install -s body-parser
+npm install -s morgan
+npm install -s serve-favicon
+
+ng g s services/medicine --module=app.module
+ng g c components/medicine-list --module=app.module
+ng g c components/medicine-detail --module=app.module
+ng g c components/medicine-edit --module=app.module
+ng g c components/medicine-add --module=app.module
+
+//ng build --prod --deploy-url /MeanPharmacy
+ng build
+npm start

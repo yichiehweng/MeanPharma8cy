@@ -1,0 +1,24 @@
+<div class="container">
+  <h1>Edit Medicine</h1>
+  <div class="row">
+    <div class="col-md-6">
+      <form (ngSubmit)="updateMedicine(theMedicine._id)" #theForm="ngForm">
+        <div class="form-group">
+          <label for="name">Code</label>
+          <input type="text" class="form-control" [(ngModel)]="theMedicine.code" name="code"  required>
+        </div>
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" class="form-control" [(ngModel)]="theMedicine.name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="name">Function</label>
+          <input type="text" class="form-control" [(ngModel)]="theMedicine.function" name="function" required>
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-success" [disabled]="!theForm.form.valid">Update</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
